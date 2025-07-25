@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Rei do TikTok Packs</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Orbitron:wght@700&amp;display=swap" rel="stylesheet"/>
+<style>
+    :root {
+      --bg-color: #0f0f1b;
+      --text-color: #ffffff;
+      --highlight-color: #e91e63;
+      --light-pink: #ff80ab;
+      --max-width: 600px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 2rem;
+    }
+
+    .container {
+      width: 100%;
+      max-width: var(--max-width);
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      text-align: center;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    h1,
+    h2 {
+      font-family: 'Orbitron', sans-serif;
+      color: var(--highlight-color);
+    }
+
+    h1 {
+      font-size: 1.8rem;
+    }
+
+    h2 {
+      font-size: 1.4rem;
+    }
+
+    .slogan {
+      font-size: 1rem;
+      color: var(--light-pink);
+      margin-top: 0.5rem;
+    }
+
+    table {
+      width: 100%;
+      border: 1px solid var(--highlight-color);
+      border-collapse: collapse;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    th,
+    td {
+      padding: 0.8rem;
+      border: 1px solid var(--highlight-color);
+    }
+
+    tr:hover {
+      background-color: rgba(233, 30, 99, 0.2);
+    }
+
+    .payment-warning {
+      background-color: rgba(233, 30, 99, 0.1);
+      padding: 1rem;
+      border: 1px solid var(--highlight-color);
+      border-radius: 8px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      text-align: left;
+    }
+
+    label {
+      font-weight: 600;
+      display: block;
+      margin-bottom: 0.25rem;
+    }
+
+    input[type='text'],
+    input[type='email'],
+    input[type='url'],
+    select,
+    textarea,
+    button {
+      padding: 0.5rem;
+      border-radius: 8px;
+      border: 1px solid var(--light-pink);
+      background-color: #1c1c2b;
+      color: var(--text-color);
+      font-family: 'Inter', sans-serif;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    button {
+      background-color: var(--highlight-color);
+      color: #fff;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    .contacts,
+    .footer,
+    .future {
+      font-size: 0.9rem;
+      color: var(--light-pink);
+    }
+
+    .future {
+      border: 1px dashed var(--light-pink);
+      padding: 1rem;
+      border-radius: 8px;
+    }
+
+    #desc-section {
+      display: none;
+    }
+
+    #uploadBasePhotosContainer {
+      display: none;
+      margin-top: 0.5rem;
+    }
+
+    .upload-photo-button {
+      margin-bottom: 0.5rem;
+    }
+
+    .upload-photo-button label {
+      cursor: pointer;
+      display: inline-block;
+      background-color: var(--highlight-color);
+      padding: 0.4rem 0.75rem;
+      border-radius: 6px;
+      font-weight: 600;
+      color: #fff;
+      transition: background-color 0.3s ease;
+    }
+
+    .upload-photo-button label:hover {
+      background-color: #c2185b;
+    }
+
+    .upload-photo-button input[type='file'] {
+      display: none;
+    }
+
+    .small-note {
+      font-size: 0.8rem;
+      color: var(--light-pink);
+      margin-left: 1rem;
+      margin-bottom: 1rem;
+      font-style: italic;
+    }
+
+    #multiUploadSection {
+      display: none;
+      margin-top: 0.5rem;
+    }
+
+    .file-description-container {
+      margin-top: 0.5rem;
+      border: 1px solid var(--highlight-color);
+      padding: 0.5rem;
+      border-radius: 8px;
+      background-color: #1c1c2b;
+    }
+
+    .file-description {
+      width: 100%;
+      margin-top: 0.25rem;
+      margin-bottom: 0.5rem;
+      font-size: 0.9rem;
+      background-color: #27273e;
+      border: 1px solid var(--light-pink);
+      color: var(--text-color);
+      border-radius: 6px;
+      padding: 0.4rem;
+      resize: vertical;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    @media (max-width: 600px) {
+      h1,
+      h2 {
+        font-size: 1.3rem;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+<header>
+<h1>👑 Encomendas do Rei do TikTok</h1>
+<p class="slogan">
+        💖 Gosta do meu conteúdo? Personalize aquela amiga da escola ou sua atriz favorita!
+        Tenha vídeos e fotos 🔥quentes🔥 com coelhinha sexy e ahegao babona, feitos por IA!
+      </p>
+</header>
+<section>
+<h2>💖 Pacotes de Vídeos + Fotos (Ahegao Babona + Coelhinha Sexy)</h2>
+<table>
+<thead>
+<tr>
+<th>Plano</th>
+<th>Conteúdo</th>
+<th>Preço (R$)</th>
+<th>Entrega em até</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>⭐ Básico</td>
+<td>2 vídeos Ahegao (Babona) + 4 fotos Coelhinha Sexy</td>
+<td>15</td>
+<td>1 dia</td>
+</tr>
+<tr>
+<td>🔥 Standard</td>
+<td>4 vídeos Ahegao (Babona) + 8 fotos Coelhinha Sexy</td>
+<td>35</td>
+<td>1-2 dias</td>
+</tr>
+<tr>
+<td>💎 Premium</td>
+<td>6 vídeos Ahegao (Babona) + 12 fotos Coelhinha Sexy</td>
+<td>40</td>
+<td>2 dias</td>
+</tr>
+<tr>
+<td>👑 Ultra</td>
+<td>8 vídeos Ahegao (Babona) + 16 fotos Coelhinha Sexy</td>
+<td>65</td>
+<td>2-3 dias</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section>
+<h2>👙 Pacotes de Imagens Personalizadas (Lingerie, Fantasia ou Roupa de sua escolha!)</h2>
+<table>
+<thead>
+<tr>
+<th>Plano de Fotos</th>
+<th>Conteúdo</th>
+<th>Preço (R$)</th>
+<th>Entrega em até</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fotos Light</td>
+<td>4 imagens personalizadas (lingerie, fantasia ou roupa de sua escolha!)</td>
+<td>8</td>
+<td>1 dia</td>
+</tr>
+<tr>
+<td>Fotos Plus</td>
+<td>10 imagens personalizadas (lingerie, fantasia ou roupa de sua escolha!)</td>
+<td>15</td>
+<td>1-2 dias</td>
+</tr>
+<tr>
+<td>Fotos Pro</td>
+<td>20 imagens personalizadas (lingerie, fantasia ou roupa de sua escolha!)</td>
+<td>25</td>
+<td>2 dias</td>
+</tr>
+<tr>
+<td>Fotos Elite</td>
+<td>35 imagens personalizadas (lingerie, fantasia ou roupa de sua escolha!)</td>
+<td>40</td>
+<td>2-3 dias</td>
+</tr>
+<tr>
+<td>VIP Custom</td>
+<td>Pedido sob medida com personagens, temas ou fantasias exclusivas</td>
+<td>Sob consulta</td>
+<td>Sob consulta</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section class="payment-warning">
+<strong>⚠️ Passo a passo para fazer seu pedido:</strong><br/><br/>
+<ol style="text-align:left; padding-left: 1.5rem;">
+<li>Faça o pagamento via <strong>PIX</strong>:</li>
+<ul>
+<li>Email PIX: <code>contato.reidotiktokpacks@outlook.com</code></li>
+</ul>
+<li>Envie um email para <strong>contato.reidotiktokpacks@outlook.com</strong> com:</li>
+<ul>
+<li>Comprovante do pagamento</li>
+<li>As imagens base que deseja usar</li>
+<li>Uma descrição do que você quer</li>
+<li>Qual plano você escolheu (veja tabelas abaixo)</li>
+</ul>
+<li>Receba seu pack no prazo informado 😈</li>
+</ol>
+<br/>
+<img alt="QR Code Pix contato.reidotiktokpacks@outlook.com" src="https://i.postimg.cc/TYwdfKYC/baixados.png" style="max-width: 150px; margin-top: 0.5rem; border-radius: 8px; border: 1px solid #e91e63;"/>
+</section>
+
+<section class="contacts">
+<h2>📞 Contatos</h2>
+      Email: contato.reidotiktokpacks@outlook.com<br/>
+      Telegram:
+      <a href="https://t.me/ReiDoTikTokPacks" target="_blank">@ReiDoTikTokPacks</a><br/>
+      WhatsApp: (em breve)<br/>
+      Linktree:
+      <a href="https://linktr.ee/rei_do_tiktok" target="_blank">linktr.ee/rei_do_tiktok</a>
+</section>
+<section class="future">
+<h2>🧪 Funcionalidades Futuras</h2>
+<p>Upload de fotos será ativado em breve!</p>
+<p>Pagamento automático em desenvolvimento.</p>
+<p>Área de clientes em construção.</p>
+</section>
+<footer class="footer">
+      © 2025 Rei do TikTok Packs | Todos os direitos reservados.
+    </footer>
+</div>
+
+</body>
+</html>
